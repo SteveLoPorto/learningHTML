@@ -1,0 +1,120 @@
+***HTML NOTES***
+
+I. What is HTML?
+    A. HTML - HyperText Markup Language
+        i. HyperText - links that connect one webpage to another.
+        ii. Markup Language - Markup is the style of the language. A "Markup" is a special tag element that annotates what content is to be displayed on the webpage.
+        
+
+II. HTML SYNTAX
+    A. FileName SYNTAX
+        i. index.html is the standard filename for files that will launch a web page.
+        ii. Files are always lowercase with no spaces, can use hypens or dashes
+    B. Writing HTML CODE
+        i. webpages are encapsilated with <html></html>
+            a. The first tag is called the opening tags and the second tag is called the closing tags
+            b. A complete opening and closing tag with content is called a "element"
+
+- There are two main areas of a html webpage
+    - The "head" area is not visable in the webpage but is instead meta data about the webpage
+        -<html><head> "metadata" </head></html>
+    - The "body" element is where the visable data is held.
+        -<html><body> "visable elements" </body></html> 
+
+- if something other than text is happening, icons, styles, it uses the link tag, this the bread and butter of HTML it references things that are not text via links and you have to tell what this link is used for where it is and how to interpret its data
+
+- validator 
+    - validator.ws3.org
+
+- standard practices 
+    - <!DOCTYPE html>
+    - <html lang="en">
+    - <meta charset="UTF-8"> 
+
+TEXT BASICS
+- headers are structured in a heiarchy, h1, h2, ect 
+* <hr> - horizontal Rule, lines that go across the page
+
+- webpages are 'white space collapsing' so they do no honor white space typed in html file
+* <br>
+
+- Basically there are inline commands to format the text
+
+- how to comment 
+    - <!-- -->
+
+- headers to paragraphs will add a automatic new line character
+- paragraph to paragraph will not 
+* </em> (inline editor) - this will emphasise the text and can be used within the tag
+
+- html entities (inline editor)
+    - html own objects to get around special characters in the code they are marked as starting with & and ending with ;
+    * &nbsp; - space entity 
+    * &lt; - less than entity
+
+* <abbr title="Mozilla Developer Networks">MDN</abbr> this will display a hover info button this is not that important 
+
+
+LISTS 
+- <ol> ordered list </ol>
+- <li> list item </li>
+- <ul> unordered list </ul> 
+- <dl> description list </dl>
+    - <dt> description term </dt>
+        - <dd> description details </dd> 
+
+TAGS
+
+* <meta name="TypeOfMetaData" content="contents of the meta data" (in header)
+
+* <link rel="what is its importance" href=where is the link to it" type="how do i interpret the data at this location"(in header)
+     - css style sheet =  <link rel="stylesheet" href="main.css" type="text/css">
+
+* <title> </title> (within head) - title of the webpage in the tabs
+
+* <h1> </h1> (within body) - header 
+
+* <p></p> (within body) - paragraph
+
+-------------------------------------------------------------------------
+
+LINKS
+*  <a href="link"> text </a> anchor tag, attaches a link to whatever is within it
+
+link types
+    - absolute link - points to an enitrly different web page
+    - relative references - references within the same folder
+    As expected other pages are just relative references 
+    - internal references - link that references a different area on the same page
+
+creating sections 
+- Creating sections allows us to ditacte a area of html together
+    - <section id="name"> text </section> 
+
+creating navagation
+- creating navatation make a list of links 
+    - <nav><ul> <li> <a href="#itemID"> text </a> </li> </ul></nav>
+
+downloadable link 
+- <a href="file" download> text </a> 
+
+target link
+- <a href="www.google.com" target="_blank"> text </a> 
+
+link to root of website
+    - <a href="/"></a> 
+
+---------------------------------------------------------------------------
+
+IMAGES
+
+- have images in a dedicated folder
+
+*<img src="path to the image" alt="image description"> - note no closing tab
+ - other attributes
+    - title="Name of the image"
+    - width="pixels"
+    - height="pixels"
+    - loading="eager" - this is default value
+    - loading="lazy" - if an image is below the fold, it will not load the image if it is not in view'
+    
