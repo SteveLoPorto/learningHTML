@@ -117,4 +117,133 @@ IMAGES
     - height="pixels"
     - loading="eager" - this is default value
     - loading="lazy" - if an image is below the fold, it will not load the image if it is not in view'
-    
+    - title="caption"
+- <figure> - this will indicate thatst somethign is self containted
+    - figures have a <figcaption> that is at the start of the end of the figure
+
+---------------------------------------------------------------------------
+SEMANTICS
+
+- <header> </header> - this adds semantic meaning to a group of things
+- <main> </main> - can only be done once
+- <footer> </footer> - footer
+
+- labeling navs for assitive tech - <nav aria-label="primary-navagation">
+- <article> </article> - distincts that something is happening here
+- <aside> </aside> - complementary text to the article
+- <mark></mark> - hight text
+-<time> datetime="08:00" </time> - time format
+- <div></div> - provides no meaning alone, blocking
+- <span></span> - provides no meaning alone, inline
+
+---------------------------------------------------------------------------
+TABLES
+
+<table> </table> - makes the table
+<tr> </tr> - table row
+<td></td> - tables data
+<th></th> - tables header for cols, put these in their own row
+    - attribute of header is scope="col" or row depending on what the header is asddressing
+<thead></thead> - put headers inside this it is for semantics
+<tbody></tbody> - put contents of the list within this
+<caption></caption> - this is the title of the table
+<table> <tr> <td> </td> </tr> </table>
+
+---------------------------------------------------------------------------
+FORMS
+
+<form action="where the info goes"></form> - creates a form
+<label for="Id name of what this label labels"></label> - 
+<input
+    type="text" - what input is it
+    name="firstName" - variable name in the get option
+    id="firstName" - declaring id of the input
+    placeholder="Jane" 
+    autocomplete="on"
+    required
+    autofocus
+    pattern = regex
+          />
+
+option menu
+            <label for="coffee">Favorite Coffee:</label>
+            <select name="coffee" id="coffee">
+              <option value="regular coffee">Regular Coffee</option>
+              <option value="iced coffee">Iced Coffee</option>
+              <option value="latte">Latte</option>
+              <option value="cappuccino">Cappuccino</option>
+              <option value="cortado">Cortado</option>
+              <option value="americano">Americano</option>
+              <option value="other">Other</option>
+            </select>
+
+ pregiven value bar
+             <label for="decade">Favorite Decade:</label>
+            <input
+              type="number"
+              name="decade"
+              id="decade"
+              min="1950"
+              max="2020"
+              step="10"
+              value="1980"
+            />
+
+<fieldset></fieldset> - ecompasses the entire forum and puts it in a nice box
+<legend> </legend> - will add a title to the forum fieldset
+
+Radio select
+ <fieldset>
+            <legend>What is your favorite food?</legend>
+            <p>
+              <input type="radio" name="food" id="tacos" value="tacos" />
+              <label for="tacos">Tacos</label>
+            </p>
+            <p>
+              <input type="radio" name="food" id="pizza" value="pizza" />
+              <label for="pizza">Pizza</label>
+            </p>
+            <p>
+              <input type="radio" name="food" id="other" value="other" />
+              <label for="other">Other</label>
+            </p>
+          </fieldset>
+brecuase every input has the same name then it will not have multiple select
+
+Checkbox - allows multiple selection
+          <fieldset>
+            <legend>Do you have pets?</legend>
+            <p>
+              <input type="checkbox" name="pets" id="dog" value="dog" />
+              <label for="dog">Dog</label>
+            </p>
+            <p>
+              <input type="checkbox" name="pets" id="cat" value="cat" />
+              <label for="cat">Cat</label>
+            </p>
+            <p>
+              <input type="checkbox" name="pets" id="fish" value="fish" />
+              <label for="fish">Fish</label>
+            </p>
+            <p>
+              <input type="checkbox" name="pets" id="otherPet" value="other" />
+              <label for="otherPet">Other</label>
+            </p>
+          </fieldset>
+
+TextArea - receive a message
+          <fieldset>
+            <legend>Send Me A Note</legend>
+            <label for="message">Your Message:</label>
+            <br />
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Type your message here"
+            ></textarea>
+          </fieldset>
+
+How to add a submit button
+<button type="submit">Submit</button>
